@@ -1,7 +1,7 @@
 
 const express = require("express");
 const app = express();
-const form=require('./routes/from');
+const form=require('./routes/form');
 const todo=require('./routes/todo');
 const path=require('path');
 const bodyParser=require('body-parser');
