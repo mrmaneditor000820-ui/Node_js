@@ -1,23 +1,13 @@
-const todos = [];
-
-const addTodo = (name) => {
-
-    const todo = {
-        id: Date.now(),
-        name: name,
-        completed: false
-    };
-
-    todos.push(todo);
-
-    return true;
+const todos=[];
+const addTodo=(name)=>{
+todos.push(name);
+return true;
 }
-
-const getAllTodos = () => {
+const getAllTodos=()=>{
     return todos;
 }
 
-module.exports = {
+module.exports={
     getAllTodos,
     addTodo
 }
