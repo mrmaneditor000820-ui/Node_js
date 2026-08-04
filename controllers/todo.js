@@ -4,7 +4,8 @@ const addTodo = (name) => {
 
     const newTodo = {
         id: Date.now(),
-        name: name
+        name: name,
+        completed: false
     };
 
     todos.push(newTodo);
@@ -19,9 +20,15 @@ const getAllTodos = () => {
     return todos;
 }
 
-
+const toggle = (id, completed) => {
+    const todo = todos.find(todo    => todo.id === id);
+    if (todo) {
+        todo.completed = !todo.completed;
+    }
+}
 
 module.exports = {
     getAllTodos,
-    addTodo
+    addTodo,
+    toggle
 }
