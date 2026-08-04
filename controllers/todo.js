@@ -14,14 +14,13 @@ const addTodo = (name) => {
 }
 
 const getAllTodos = () => {
-    
-    console.log(todos);
-    
     return todos;
 }
 
-const toggle = (id, completed) => {
-    const todo = todos.find(todo    => todo.id === id);
+const toggleTodo = (id) => {
+
+    const todo = todos.find(t => t.id == id);
+
     if (todo) {
         todo.completed = !todo.completed;
     }
@@ -30,5 +29,5 @@ const toggle = (id, completed) => {
 module.exports = {
     getAllTodos,
     addTodo,
-    toggle
+    toggleTodo
 }
